@@ -98,6 +98,7 @@ install.packages("ProFAST")
 For an example of typical CAESAR.Suite usage, please see our [Package Website](https://XiaoZhangryy.github.io/CAESAR.Suite/index.html) for a demonstration and overview of the functions included in CAESAR.Suite.
 
 # NEWs
+* CAESAR.Suite version 0.2 (2025-03-02)
 * CAESAR.Suite version 0.1 (2024-09-06)
 
 

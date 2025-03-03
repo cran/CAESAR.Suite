@@ -2,7 +2,7 @@ Package: CAESAR.Suite
 Type: Package
 Title: CAESAR: a Cross-Technology and Cross-Resolution Framework for
         Spatial Omics Annotation
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(person(given = "Xiao", family = "Zhang", email = "zhangxiao1994@cuhk.edu.cn", role = c("aut","cre")),
              person(given = "Wei", family = "Liu", role = "aut"),
              person(given = "Jin", family = "Liu", role = "aut"))
@@ -28,5 +28,5 @@ URL: https://github.com/XiaoZhangryy/CAESAR.Suite
 BugReports: https://github.com/XiaoZhangryy/CAESAR.Suite/issues
 RoxygenNote: 7.3.2
 NeedsCompilation: yes
-Packaged: 2024-09-14 01:06:05 UTC; ZXiao
-Date/Publication: 2024-09-16 14:20:06 UTC
+Packaged: 2025-03-01 16:55:27 UTC; ZXiao
+Date/Publication: 2025-03-03 10:10:01 UTC

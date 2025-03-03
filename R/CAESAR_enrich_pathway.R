@@ -92,7 +92,7 @@ fast_theo_mu_sig <- function(wei_sp_mat, n1, n2) {
 
 fast.permu_edge <- function(n_per, wei_sp_mat, n1, n2, progress_bar = FALSE) {
     n <- n1 + n2
-    if (progress_bar) {
+    if (progress_bar && interactive()) {
         pb <- txtProgressBar(min = 0, max = n_per, initial = 0)
         temp <- sapply(1:n_per, function(peri) {
             setTxtProgressBar(pb, peri)
@@ -316,11 +316,25 @@ pathway.rgTest <- function(
     if (parallel) {
         future::plan("multicore", workers = ncores)
         # progress <- progressr::progressor(along = gene.set.list)
-        pb <- progress::progress_bar$new(format = "[:bar] :percent ETA: :eta")
-        res <- furrr::future_map(idx.list, test_fun, .progress = TRUE, .options = furrr_options(seed = TRUE))
+        # pb <- progress::progress_bar$new(format = "[:bar] :percent ETA: :eta")
+        # res <- furrr::future_map(idx.list, test_fun, .progress = TRUE, .options = furrr_options(seed = TRUE))
+
+        if (interactive()) {
+            pb <- progress::progress_bar$new(format = "[:bar] :percent ETA: :eta")
+            res <- furrr::future_map(idx.list, test_fun, .progress = TRUE, .options = furrr_options(seed = TRUE))
+        } else {
+            res <- furrr::future_map(idx.list, test_fun, .progress = FALSE, .options = furrr_options(seed = TRUE))
+        }
+
         res <- t(Reduce(cbind, res))
     } else {
-        res <- t(pbapply::pbsapply(idx.list, test_fun))
+        # res <- t(pbapply::pbsapply(idx.list, test_fun))
+
+        if (interactive()) {
+            res <- t(pbapply::pbsapply(idx.list, test_fun))
+        } else {
+            res <- t(sapply(idx.list, test_fun))
+        }
     }
     rownames(res) <- names(gene.set.list.cut)
     res <- cbind(res, gene.set.length = l.gene.set)
