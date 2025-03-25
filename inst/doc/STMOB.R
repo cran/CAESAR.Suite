@@ -1,7 +1,8 @@
 ## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
+    eval = requireNamespace("ProFAST", quietly = TRUE),
+    collapse = TRUE,
+    comment = "#>"
 )
 
 ## -----------------------------------------------------------------------------

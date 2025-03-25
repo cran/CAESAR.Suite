@@ -1,7 +1,8 @@
 ## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
+    eval = requireNamespace("ProFAST", quietly = TRUE),
+    collapse = TRUE,
+    comment = "#>"
 )
 
 ## -----------------------------------------------------------------------------
@@ -249,12 +250,23 @@ plots <- lapply(BC_XeniumList, function(seu) {
 cowplot::plot_grid(plotlist = plots, ncol = 1)
 
 ## -----------------------------------------------------------------------------
-pathway_list <- msigdbr(species = "Homo sapiens", category = "C5", subcategory = "GO:BP") %>%
-    group_by(gs_name) %>%
-    summarise(genes = list(intersect(gene_symbol, common_genes))) %>%
-    tibble::deframe()
-n.pathway_list <- sapply(pathway_list, length)
-pathway_list <- pathway_list[n.pathway_list >= 5]
+# pathway_list <- msigdbr(species = "Homo sapiens", category = "C5", subcategory = "GO:BP") %>%
+#     group_by(gs_name) %>%
+#     summarise(genes = list(intersect(gene_symbol, common_genes))) %>%
+#     tibble::deframe()
+# n.pathway_list <- sapply(pathway_list, length)
+# pathway_list <- pathway_list[n.pathway_list >= 5]
+
+# --------------------------------------------
+# To avoid potential issues caused by differences in operating systems,
+# R package versions, and other uncontrollable factors across environments,
+# we pre-generated the 'pathway_list' object using the code above
+# --------------------------------------------
+
+githubURL <- "https://github.com/XiaoZhangryy/CAESAR.Suite/blob/master/vignettes_data/pathway4BC.rda?raw=true"
+pathway4BC_file <- file.path(tempdir(), "pathway4BC.rda")
+download.file(githubURL, pathway4BC_file, mode='wb')
+load(pathway4BC_file)
 
 print(head(pathway_list))
 

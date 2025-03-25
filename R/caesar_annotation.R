@@ -345,7 +345,7 @@ annotation_mat <- function(
             #     distce = distce, weight.mat = weight.mat
             # )
             
-            if (interactive()) {
+            if (is_interactive()) {
                 dis.mat.sim <- pbapply::pbsapply(
                     1:n_fake, fake_dis_fun,
                     distce = distce, weight.mat = weight.mat

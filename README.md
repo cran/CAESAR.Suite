@@ -87,7 +87,7 @@ if (!require("BiocManager", quietly = TRUE))
 # install the package on Bioconducter
 BiocManager::install(c("scater"))
 ```
-If  dependent packages (such as `ProFAST`) not normally installed are in CRAN, then use the following command to install the dependent packages.
+If dependent packages (such as `ProFAST`) not normally installed are in CRAN, then use the following command to install the dependent packages.
 ```{Linux}
 # install the package on CRAN
 install.packages("ProFAST")

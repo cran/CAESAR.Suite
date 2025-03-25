@@ -254,7 +254,7 @@ CAESAR.CTDEP <- function(
             #     ps = pathway_scores, id1 = id1, id2 = id2
             # )
 
-            if (interactive()) {
+            if (is_interactive()) {
                 pvals_mat[, ct] <- pbapply::pbsapply(
                     1:p, wtest_fun,
                     ps = pathway_scores, id1 = id1, id2 = id2
