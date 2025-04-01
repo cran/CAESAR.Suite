@@ -12,7 +12,7 @@
 
 <meta name="author" content="Xiao Zhang" />
 
-<meta name="date" content="2025-03-25" />
+<meta name="date" content="2025-04-01" />
 
 <title>ST MOB data analysis</title>
 
@@ -340,7 +340,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">ST MOB data analysis</h1>
 <h4 class="author">Xiao Zhang</h4>
-<h4 class="date">2025-03-25</h4>
+<h4 class="date">2025-04-01</h4>
 
 
 
@@ -463,7 +463,7 @@ scRNA-seq reference data. First, we calculate the co-embeddings.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>MOB_scRNA <span class="ot">&lt;-</span> ProFAST<span class="sc">::</span><span class="fu">NCFM</span>(MOB_scRNA, <span class="at">q =</span> <span class="dv">50</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="co">#&gt; Warning in asMethod(object): sparse-&gt;dense coercion: allocating vector of size</span></span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">#&gt; 1.3 GiB</span></span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">#&gt; 2025-03-25 10:38:19.363887 : ***** Finish CoFAST, 0.307 mins elapsed.</span></span></code></pre></div>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">#&gt; 2025-04-01 10:08:54.745746 : ***** Finish CoFAST, 0.39 mins elapsed.</span></span></code></pre></div>
 <p>Then, we detect signature genes.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="co"># calculate cell-gene distance</span></span>
 <span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>MOB_scRNA <span class="ot">&lt;-</span> ProFAST<span class="sc">::</span><span class="fu">pdistance</span>(MOB_scRNA, <span class="at">reduction =</span> <span class="st">&quot;ncfm&quot;</span>)</span>
@@ -697,7 +697,7 @@ information, so we can obtain spatial aware co-embeddings.</p>
 <span id="cb8-105"><a href="#cb8-105" tabindex="-1"></a><span class="co">#&gt; Satrt ICM and E-step! </span></span>
 <span id="cb8-106"><a href="#cb8-106" tabindex="-1"></a><span class="co">#&gt; Finish ICM and E-step! </span></span>
 <span id="cb8-107"><a href="#cb8-107" tabindex="-1"></a><span class="co">#&gt; iter = 25, loglik= 97481.664466, dloglik=0.000044</span></span>
-<span id="cb8-108"><a href="#cb8-108" tabindex="-1"></a><span class="co">#&gt; 2025-03-25 10:38:38.892469 : ***** Finish calculate CAESAR embedding, 0.041 mins elapsed.</span></span>
+<span id="cb8-108"><a href="#cb8-108" tabindex="-1"></a><span class="co">#&gt; 2025-04-01 10:09:18.03337 : ***** Finish calculate CAESAR embedding, 0.043 mins elapsed.</span></span>
 <span id="cb8-109"><a href="#cb8-109" tabindex="-1"></a><span class="fu">print</span>(MOB_ST)</span>
 <span id="cb8-110"><a href="#cb8-110" tabindex="-1"></a><span class="co">#&gt; An object of class Seurat </span></span>
 <span id="cb8-111"><a href="#cb8-111" tabindex="-1"></a><span class="co">#&gt; 13895 features across 280 samples within 1 assay </span></span>
@@ -923,7 +923,7 @@ the selected signature genes.</p>
 <span id="cb20-21"><a href="#cb20-21" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb20-22"><a href="#cb20-22" tabindex="-1"></a><span class="co">#&gt; other attached packages:</span></span>
 <span id="cb20-23"><a href="#cb20-23" tabindex="-1"></a><span class="co">#&gt; [1] purrr_1.0.4        ggplot2_3.5.1      ProFAST_1.4        gtools_3.9.5      </span></span>
-<span id="cb20-24"><a href="#cb20-24" tabindex="-1"></a><span class="co">#&gt; [5] Seurat_5.2.1       SeuratObject_5.0.2 sp_2.2-0           CAESAR.Suite_0.2.1</span></span>
+<span id="cb20-24"><a href="#cb20-24" tabindex="-1"></a><span class="co">#&gt; [5] Seurat_5.2.1       SeuratObject_5.0.2 sp_2.2-0           CAESAR.Suite_0.2.2</span></span>
 <span id="cb20-25"><a href="#cb20-25" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb20-26"><a href="#cb20-26" tabindex="-1"></a><span class="co">#&gt; loaded via a namespace (and not attached):</span></span>
 <span id="cb20-27"><a href="#cb20-27" tabindex="-1"></a><span class="co">#&gt;   [1] matrixStats_1.5.0           spatstat.sparse_3.1-0      </span></span>

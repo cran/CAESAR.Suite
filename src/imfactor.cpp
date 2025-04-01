@@ -7,7 +7,9 @@
 #include<ctime>
 //#include<boost/math/tools/minima.hpp>
 
+#ifndef INT_MIN
 #define INT_MIN (-INT_MAX - 1)
+#endif
 
 using namespace Rcpp;
 using namespace arma;

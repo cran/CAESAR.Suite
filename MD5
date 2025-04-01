@@ -1,4 +1,4 @@
-443ab479880ae8e1282ceef2d682a077 *DESCRIPTION
+ff3d4ba0476c19843f8d8d283f5e20f2 *DESCRIPTION
 b2ea103fda2c186b16f5562b8b729cb2 *NAMESPACE
 e1813d34f01daf99aa3491224746b03e *R/CAESAR_enrich_pathway.R
 703200a78964037977e230f04bfc5f60 *R/RcppExports.R
@@ -18,10 +18,10 @@ af60a42e6098ba703fb8b2820fa198da *README.md
 bc283a897545200020dd668eb5aff381 *data/toydata.rda
 4a42deed3f06fd662ef7971f7952eab8 *inst/doc/STMOB.R
 725cbaeca6e2d0c4a4f15b0e14159703 *inst/doc/STMOB.Rmd
-ea8edf72896dc454091a4b0c503e3690 *inst/doc/STMOB.html
+17ee985f94d097e04faef29bda811ca7 *inst/doc/STMOB.html
 26ab3f05636df1c896c307dd81b8b86b *inst/doc/XeniumBC.R
 0c025bdf7549e2f277df1d75beba310e *inst/doc/XeniumBC.Rmd
-ea8b630ccbbf20835ee36bcff5e9941b *inst/doc/XeniumBC.html
+8975ea701c513480403a10f99bd98be8 *inst/doc/XeniumBC.html
 e005acf33dfe84bb196c3b48855af07a *man/CAESAR.CTDEP.Rd
 b7d7eab86444df9016966ed4e243b74a *man/CAESAR.RUV.Rd
 84d35e59c114e3a81f3692f8cb0ce9b9 *man/CAESAR.annotation.Rd
@@ -53,6 +53,6 @@ e62585629948e7dd143efbad43c2a6eb *src/Makevars
 6d4fd8b30c48b50e3e7e3d06b9a1781e *src/Makevars.win
 10b372f6482f1d7ef5f7923a679297a8 *src/RcppExports.cpp
 819221d2391e1773b82fda6719f011f3 *src/gene_embed.cpp
-8280bb5d65d1a8c100079e75dae7a9eb *src/imfactor.cpp
+adb9b3b7185bd8d00537b55cdf6224e5 *src/imfactor.cpp
 725cbaeca6e2d0c4a4f15b0e14159703 *vignettes/STMOB.Rmd
 0c025bdf7549e2f277df1d75beba310e *vignettes/XeniumBC.Rmd
